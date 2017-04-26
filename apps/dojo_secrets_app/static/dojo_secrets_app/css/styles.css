@@ -1,0 +1,39 @@
+.reg_user {
+  border: 1px solid black;
+  margin-left: 10px;
+  width: 350px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.login_user {
+  border: 1px solid black;
+  margin-left: 10px;
+  width: 350px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+label{
+  display: block;
+  width: 300px;
+  height: auto;
+  margin-top: 10px;
+  text-align: right;
+  margin-left: -20px;
+}
+
+.reg_user input{
+  margin-left: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+button {
+  text-align: center;
+  margin-left: 100px;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dojo Secrets!</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'dojo_secrets_app/css/styles.css' %}">
+    </head>
+  <body>
+    <div class="reg_user">
+      <h2>Register New User</h2>
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+          <li{% if message.tags %} class"{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <form action="/register" method="POST">
+        {% csrf_token %}
+        <label for="first_name">
+          First Name
+          <input type="text" name="first_name">
+        </label>
+        <label for="last_name">
+          Last Name
+          <input type="text" name="last_name">
+        </label>
+        <label for="email">
+          Email
+          <input type="email" name="email">
+        </label>
+        <label for="password">
+          Password
+          <input type="password" name="password">
+        </label>
+        <label for="pw_confirm">
+          Confirm Password
+          <input type="password" name="pw_confirm">
+        </label>
+        <button>Register New User</button>
+      </form>
+    </div>
+    <div class="login_user">
+      <h2>Login</h2>
+      <form action="/login" method="POST">
+        {% csrf_token %}
+        <label for="email">
+          Email
+          <input type="email" name="email">
+        </label>
+        <label for="Password">
+          Password
+          <input type="password" name="password">
+        </label>
+        <button>login User</button>
+  </body>
+</html>
